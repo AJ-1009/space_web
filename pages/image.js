@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 const images = ["jpg", "png"];
 const videos = ["mp4"];
-export default function image() {
+export default function Image() {
   const [photos, setphotos] = useState([]);
   const [video, setvideo] = useState([]);
   const [query,setquery] = useState("")
