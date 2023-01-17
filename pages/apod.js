@@ -5,7 +5,8 @@ export default function Apod() {
     const [details,setdetails] = useState()
   useEffect(() => {
     fetch(
-      `${process.env.NEXT_PUBLIC_APOD_LINK}`
+      `https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_API_KEY
+}`
     )
       .then((res) => res.json())
       .then((res) => {
