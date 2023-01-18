@@ -10,14 +10,13 @@ export default function Apod() {
     )
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         setdetails(res)
       });
   }, []);
   return (
     <div>
       <div>
-        {details && <ImageOfDay author={details.copyright} link={details.url} title={details.title} desc={details.explanation} />}
+        {details && <ImageOfDay author={details.copyright} link={details.url} title={details.title} desc={details.explanation} date={details.date} />}
       </div>
     </div>
   );
