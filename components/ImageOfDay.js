@@ -52,7 +52,7 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
           <div className={styles["image"]}>
             <img src={link} alt="" />
           </div>
-          <div className={styles["author"]}>{author}</div>
+          <div className={styles["author"]}>Credits : {author}</div>
         </div>
         <div className={styles["desc"]}>{desc}</div>
       </div>
