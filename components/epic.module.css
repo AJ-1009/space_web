@@ -22,6 +22,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid #666;
+  cursor: pointer;
 }
 .info-wrapper {
   flex-shrink: 0;
