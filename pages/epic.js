@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 export default function Epic() {
   const [details, setdetails] = useState([]);
   const [photos, setphotos] = useState([]);
+const [index,setindex] = useState(0);
+const [showndetail,setshowndetail] = useState()
   useEffect(() => {
     fetch(
       `https://api.nasa.gov/EPIC/api/natural/images?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -22,6 +24,20 @@ export default function Epic() {
     });
     setphotos(images);
   }, [details]);
+useEffect(()=>{
+setdetail(details[index])
+},[details,index])
+const prev = ()=>{
+if(index==0){
+setindex(details.length()-1)
+}
+else{
+setindex(index-1)}
+}
+const next = ()=>{
+if(index==details.length()-1){setindex(0)}
+
+else{setindex(index+1)}}
   return (
     <div>
       <div>
