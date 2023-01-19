@@ -1,4 +1,5 @@
 import moment from "moment/moment";
+import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import styles from "../components/epic.module.css";
@@ -54,6 +55,9 @@ export default function Epic() {
   }, [showndetail]);
   return (
     <div>
+        <Head>
+            <title>Earth Polychromatic Imaging Camera</title>
+        </Head>
       <div className={styles["main-wrapper"]}>
         {console.log(showndetail)}
         <div className={styles["img-wrapper"]}>
