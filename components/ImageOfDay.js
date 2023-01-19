@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./image-of-day.module.css";
@@ -40,9 +40,7 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
   }, []);
   return (
     <>
-      <Head>
-        <title>NASA&#039;s Astronomy Picture of the Day</title>
-      </Head>
+      
       <div className={styles["heading"]}>
         NASA&#039;s Astronomy Picture of the Day
       </div>

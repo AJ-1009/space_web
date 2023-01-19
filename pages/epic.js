@@ -9,6 +9,21 @@ export default function Epic() {
   const [index, setindex] = useState(0);
   const [showndetail, setshowndetail] = useState();
   const [imagelink, setimagelink] = useState();
+  const [date, setdate] = useState();
+  const prev = () => {
+    if (index == 0) {
+      setindex(details.length - 1);
+    } else {
+      setindex(index - 1);
+    }
+  };
+  const next = () => {
+    if (index == details.length - 1) {
+      setindex(0);
+    } else {
+      setindex(index + 1);
+    }
+  };
   useEffect(() => {
     fetch(
       `https://api.nasa.gov/EPIC/api/natural/images?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
@@ -26,24 +41,6 @@ export default function Epic() {
     setphotos(images);
     setshowndetail(details[index]);
   }, [details]);
-  const prev = () => {
-    if (index == 0) {
-      setindex(7);
-      setshowndetail(details[index]);
-    } else {
-      setshowndetail(details[index - 1]);
-      setindex(index - 1);
-    }
-  };
-  const next = () => {
-    if (index == 7) {
-      setindex(0);
-      setshowndetail(details[0]);
-    } else {
-      setindex(index + 1);
-      setshowndetail(details[index + 1]);
-    }
-  };
   useEffect(() => {
     setimagelink(
       `https://api.nasa.gov/EPIC/archive/natural/${moment(
@@ -52,14 +49,26 @@ export default function Epic() {
         process.env.NEXT_PUBLIC_API_KEY
       }`
     );
+    setdate(moment(showndetail?.date).format("YYYY-MM-DD"));
   }, [showndetail]);
+  useEffect(() => {
+    setshowndetail(details[index]);
+  }, [index]);
+  useEffect(() => {
+    fetch(
+      `https://api.nasa.gov/EPIC/api/natural/date/${date}?api_key=${process.env.NEXT_PUBLIC_API_KEY}`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setdetails(res);
+      });
+  }, [date]);
   return (
     <div>
-        <Head>
-            <title>Earth Polychromatic Imaging Camera</title>
-        </Head>
+      <Head>
+        <title>Earth Polychromatic Imaging Camera</title>
+      </Head>
       <div className={styles["main-wrapper"]}>
-        {console.log(showndetail)}
         <div className={styles["img-wrapper"]}>
           <div
             onClick={prev}
@@ -90,8 +99,17 @@ export default function Epic() {
             </Link>
           )}
           <div className={styles["points"]}>
-            <div>Date : {moment(showndetail?.date).format("DD/MM/YYYY")} </div>
+            <div>
+              Date : {moment(showndetail?.date).format("DD/MM/YYYY")}
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setdate(e.target.value)}
+              />
+            </div>
+
             <div>Processing Version : {" " + showndetail?.version}</div>
+            <div>Total Images : {details.length}</div>
             <div>Distance to Earth : 1,420,065 Km</div>
             <div>Distance to Sun : 145,764,730 Km</div>
             <div>Sun to Earth : 147,161,760 km</div>
@@ -100,6 +118,17 @@ export default function Epic() {
             <img src={imagelink} alt="" />
           </div>
         </div>
+      </div>
+      <div className={styles["photos-wrapper"]}>
+        {photos.map((img, idx) => (
+          <div
+            key={idx}
+            onClick={() => setindex(idx)}
+            style={{ border: idx == index ? "1px solid #e8e8e8" : "0" }}
+          >
+            <img src={img} alt="" />
+          </div>
+        ))}
       </div>
     </div>
   );
