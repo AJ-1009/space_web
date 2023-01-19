@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./image-of-day.module.css";
 const Month = [
@@ -46,12 +47,18 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
         NASA&#039;s Astronomy Picture of the Day
       </div>
       <div className={styles["title"]}>{title}</div>
-      {completeDate && <div className={styles["author"]} style={{paddingTop:'20px'}} >{completeDate}</div>}
+      {completeDate && (
+        <div className={styles["author"]} style={{ paddingTop: "20px" }}>
+          {completeDate}
+        </div>
+      )}
       <div className={styles["flex"]}>
         <div className={styles["img-wrapper"]}>
-          <div className={styles["image"]}>
-            <img src={link} alt="" />
-          </div>
+          <Link href={link} target="_blank" >
+            <div className={styles["image"]}>
+              <img src={link} alt="" />
+            </div>
+          </Link>
           <div className={styles["author"]}>Credits : {author}</div>
         </div>
         <div className={styles["desc"]}>{desc}</div>

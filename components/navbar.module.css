@@ -1,0 +1,16 @@
+.navbar{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.link{
+    text-decoration: none;
+    color: #e8e8e8;
+    opacity: .8;
+    font-size: 18px;
+}
+.link:hover{
+    opacity: 1;
+    border-bottom: 1px solid #e8e8e8;
+}
