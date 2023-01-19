@@ -66,7 +66,7 @@ export default function Epic() {
             className={styles["btn"]}
             style={{ width: "20px", height: "20px" }}
           >
-            P
+            &larr;
           </div>
           <div style={{ backgroundImage: `url('${imagelink}')` }}></div>
 
@@ -75,7 +75,7 @@ export default function Epic() {
             className={styles["btn"]}
             style={{ width: "20px", height: "20px" }}
           >
-            N
+            &rarr;
           </div>
         </div>
         <div className={styles["info-wrapper"]}>
