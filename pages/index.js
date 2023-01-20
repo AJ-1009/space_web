@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
+
 
 export default function Home() {
   
@@ -10,8 +10,6 @@ export default function Home() {
         <meta name="description" content="Trying my best to make it best" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
-
       <div className="text">Made with ❤️ by Ashwin</div>
     </div>
   );

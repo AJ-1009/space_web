@@ -6,16 +6,25 @@ body{
 .text{
   color: #e8e8e8;
   font-size: 36px;
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 50vh;
+}
+#input{
+  background-color: black;
+  color: #e8e8e8;
+  outline: none;
+  font-size: 20px;
+  margin:auto;
+  border: 0;
 }
 @media (max-width:450px){
   .text{
-    margin-top: 30px;
-    height: 50vh;
+    margin-top: 30vh;
     font-size: 26px;
+  }
+  #input{
+    margin-top: 50px;
   }
 }
