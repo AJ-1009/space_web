@@ -42,7 +42,7 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
     <>
       
       <div className={styles["heading"]}>
-        NASA&#039;s Astronomy Picture of the Day
+        Astronomy Picture of the Day
       </div>
       <div className={styles["title"]}>{title}</div>
       {completeDate && (
