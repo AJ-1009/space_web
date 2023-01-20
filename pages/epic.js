@@ -110,6 +110,7 @@ export default function Epic() {
 
             <div>Processing Version : {" " + showndetail?.version}</div>
             <div>Total Images : {details.length}</div>
+<div>Showing {index} out of {details.length}</div>
             <div>Distance to Earth : 1,420,065 Km</div>
             <div>Distance to Sun : 145,764,730 Km</div>
             <div>Sun to Earth : 147,161,760 km</div>
