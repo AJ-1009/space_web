@@ -3,23 +3,23 @@
   flex-direction: column;
   gap: 20px;
   flex-wrap: wrap;
-  transition: all 0.75s cubic-bezier(0.8, 0, 0.18, 1) 0s;
+  transition: all 1s cubic-bezier(0.8, 0, 0.18, 1) 0s;
   position: fixed;
   height: 100vh;
   z-index: 9999999;
   background-color: black;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   padding: 20px;
 }
 .hidden {
   visibility: hidden;
-  transform: translateY(-100%);
+  transform: translateX(-100%);
 }
 .shown {
   visibility: visible;
-  transition: translateY(0);
+  transition: translateX(0);
 }
 .link {
   text-decoration: none;
@@ -38,4 +38,13 @@
   background-size: contain;
   background-position: center;
   cursor: pointer;
+}
+@media (max-width:400px){
+  .link-wrapper{
+    width: 100%;
+  }
+  .icon{
+    width: 50px;
+    height: 40px;
+  }
 }

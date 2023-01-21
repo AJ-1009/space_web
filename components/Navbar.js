@@ -12,6 +12,9 @@ export default function Navbar() {
         }`}
       >
         <div className={styles["icon"]} onClick={() => setmenu(false)}></div>
+        <Link href="/" className={styles["link"]} onClick={()=>setmenu(false)} >
+          Home
+        </Link>
         <Link href="/apod" className={styles["link"]} onClick={()=>setmenu(false)} >
           Astronomy Picture of the Day
         </Link>
