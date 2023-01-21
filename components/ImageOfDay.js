@@ -26,6 +26,7 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
               {author && (
                 <div className={styles["author"]}>Credits : {author}</div>
               )}
+<a href={link} download className={styles["author"]}>Download image</a>
             </div>
             <div className={styles["desc"]}>{desc}</div>
           </div>
