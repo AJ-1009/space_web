@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#Sample images from Astronomy Picture of the day.
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+![M16Pillar_WebbOzsarac_960](https://user-images.githubusercontent.com/108213911/213974230-52000c2c-a2e8-4939-9d20-aa52ea27c70a.jpg)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
+![ConeNebula_Dieterich_960](https://user-images.githubusercontent.com/108213911/213973315-2786d62e-ac22-4579-9b4b-ec55c6c7e3eb.jpg)
+
+
+
+![M35_CFHT_960](https://user-images.githubusercontent.com/108213911/213973353-3c203790-74c0-43da-a6c3-e76389749b6f.jpg)
+
+
+
+![Thor_Rochford_960](https://user-images.githubusercontent.com/108213911/213973386-0da01974-59de-4590-8faa-4f3df020dca0.jpg)
+
+
+
+![IC1396_Miller_960](https://user-images.githubusercontent.com/108213911/213973410-16d28ca4-59ce-4b8a-bc49-3db204102267.jpg)
+
+
+
+![greencompany_rive_960](https://user-images.githubusercontent.com/108213911/213973479-3240a24c-6deb-4972-b174-099445ec06eb.jpg)
+
+
+
+
+![Arp274_HubbleOzsarac_1080](https://user-images.githubusercontent.com/108213911/213973723-8dfd843a-9c10-4b16-9e3c-1bbab2c5cb08.jpg)
+
+
+
+
+
+
+
+
+![B33LRGB_fb1024](https://user-images.githubusercontent.com/108213911/213973785-279f76d7-c321-4b5b-8f34-de477b5dc104.png)
+
+
+
+
+
+
+![NGC7293-TommasoStella2022WEB1024](https://user-images.githubusercontent.com/108213911/213973879-9ea14fa2-302c-47c5-99bd-f7644b3127e8.jpg)
+
+
+
+
+
+
+![DragonsEgg_Croman_960](https://user-images.githubusercontent.com/108213911/213974027-e54cba18-2553-4a57-9649-5592fdc21d97.jpg)
+
+
+
+
+
+
+
+
+![cg4_selby_960](https://user-images.githubusercontent.com/108213911/213974123-36f940d7-2f65-431f-b8fc-12071ad4cc23.jpg)
+
