@@ -24,6 +24,9 @@ export default function Navbar() {
         <Link href="/epic" className={styles["link"]} onClick={()=>setmenu(false)} >
           Earth Polychromatic Imaging Camera
         </Link>
+        <Link href="/saves" className={styles["link"]} onClick={()=>setmenu(false)} >
+         Your Saves Picture
+        </Link>
 <Link href ="https://github.com/AJ-1009/space_web" target="_blank" className={styles["link"]} onClick={()=>setmenu(false)}>Contribute</Link>
       </div>
     </div>

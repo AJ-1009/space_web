@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import moment from "moment/moment";
-import ImageOfDay from "../components/ImageOfDay";
+import ImageOfDay from "../../components/ImageOfDay";
 import Head from "next/head";
 export default function Apod() {
   const [details, setdetails] = useState();
@@ -32,14 +32,11 @@ export default function Apod() {
       <div>
         {details && (
           <ImageOfDay
-            author={details.copyright}
-            link={details.url}
-            title={details.title}
-            desc={details.explanation}
-            date={details.date}
+           detail={details}
+            type="save"
           />
         )}
-        <div id="input">
+        <div id="input" style={{marginTop:"20px"}} >
           Select a Date{" "}: {" "}
           <input
             type="date"
