@@ -40,7 +40,7 @@ export default function Saves() {
           </Link>
         ))}
       </div>
-      {!saves.length && <div className={styles["nothing-here"]}>Nothing Here</div>}
+      {!saves.length && <div className={styles["nothing-here"]}>You can see your saved Astronomy Picture of day here </div>}
       {saves.length && (
         <div
           onClick={() => {

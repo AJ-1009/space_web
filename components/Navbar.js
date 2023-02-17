@@ -25,7 +25,7 @@ export default function Navbar() {
           Earth Polychromatic Imaging Camera
         </Link>
         <Link href="/saves" className={styles["link"]} onClick={()=>setmenu(false)} >
-         Your Saves Picture
+         Your Saved Picture
         </Link>
 <Link href ="https://github.com/AJ-1009/space_web" target="_blank" className={styles["link"]} onClick={()=>setmenu(false)}>Contribute</Link>
       </div>
