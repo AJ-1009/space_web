@@ -69,6 +69,7 @@ body {
 .hi {
   color: #e8e8e8;
   font-size: 26px;
+  word-spacing: 10px;
 }
 .img {
   width: 70px;

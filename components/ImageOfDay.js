@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./image-of-day.module.css";
 
 export default function ImageOfDay({ title, link, desc, author, date }) {
+ 
   return (
     <>
       {link && (
@@ -26,7 +27,9 @@ export default function ImageOfDay({ title, link, desc, author, date }) {
               {author && (
                 <div className={styles["author"]}>Credits : {author}</div>
               )}
-<a href={link} download className={styles["author"]}>Download image</a>
+              <Link href={link} download className={styles["author"]} target="_parent" >
+                Download image
+              </Link>
             </div>
             <div className={styles["desc"]}>{desc}</div>
           </div>

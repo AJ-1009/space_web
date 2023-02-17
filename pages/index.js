@@ -12,10 +12,10 @@ export default function Home() {
         <div className="img" >
           <img src="/victory.png" alt="" />
         </div>
-        <div className="hi">Hi,there</div>
+        <div className="hi">Hi There</div>
       </div>
       <div className="text">
-        Made with <div className="heart"> ❤️</div> by Ashwin
+        Made with <div className="heart"> ❤️ </div> by Ashwin
       </div>
     </div>
   );
