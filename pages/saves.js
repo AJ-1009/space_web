@@ -12,41 +12,49 @@ export default function Saves() {
       setsaves(a);
     }
   }, []);
-  
   return (
     <div>
-        <Head>
-            <title>Your saves</title>
-        </Head>
-      {/* {saves && (
-        <div>
-          <div className={styles["main-wrapper"]}>
-            <div className={styles["btn"]} onClick={pre}>
-              &larr;
-            </div>
-            <ImageOfDay detail={data} />
-            <div className={styles["btn"]} onClick={next}>
-              &rarr;
+      <Head>
+        <title>Your saves</title>
+      </Head>
+      <div className={styles["img-wrapper"]}>
+        {saves?.map((img, index) => (
+          <div key={index} >
+            <Link href={"/apod/" + img.date} key={index}>
+              <div className={styles["img"]}>
+                <img src={img.url} alt="" />
+              </div>
+            </Link>
+            <div
+              className={styles["btn"]}
+              style={{ marginTop: "10px" }}
+              onClick={() => {
+                let a = JSON.parse(localStorage.getItem("saves"))
+                a.splice(index)
+                let b = JSON.stringify(a)
+                localStorage.setItem("saves",b)
+                alert("Item remove successfully")
+                setTimeout(() => {
+                  router.reload()
+                }, 1000);
+              }}
+            >
+              Remove
             </div>
           </div>
-        </div>
-      )} */}
-      <div className={styles['img-wrapper']} >
-        {saves?.map((img,index) => (
-          <Link href={"/apod/" + img.date} key={index}>
-            <div className={styles["img"]}>
-                <img src={img.url} alt="" />
-            </div>
-          </Link>
         ))}
       </div>
-      {!saves.length && <div className={styles["nothing-here"]}>You can see your saved Astronomy Picture of day here </div>}
+      {!saves.length && (
+        <div className={styles["nothing-here"]}>
+          You can see your saved Astronomy Picture of day here{" "}
+        </div>
+      )}
       {saves.length && (
         <div
           onClick={() => {
             localStorage.clear();
             router.reload();
-            alert("All Clear")
+            alert("All Clear");
           }}
           className={styles["btn"]}
         >
