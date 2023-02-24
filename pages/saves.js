@@ -9,7 +9,7 @@ export default function Saves() {
   useEffect(() => {
     if (localStorage.getItem("saves")) {
       let a = JSON.parse(localStorage.getItem("saves"));
-      setsaves(a);
+      setsaves(a.reverse());
     }
   }, []);
   return (
@@ -25,22 +25,8 @@ export default function Saves() {
                 <img src={img.url} alt="" />
               </div>
             </Link>
-            <div
-              className={styles["btn"]}
-              style={{ marginTop: "10px" }}
-              onClick={() => {
-                let a = JSON.parse(localStorage.getItem("saves"))
-                a.splice(index)
-                let b = JSON.stringify(a)
-                localStorage.setItem("saves",b)
-                alert("Item remove successfully")
-                setTimeout(() => {
-                  router.reload()
-                }, 1000);
-              }}
-            >
-              Remove
-            </div>
+            
+          
           </div>
         ))}
       </div>
