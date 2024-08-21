@@ -15,7 +15,7 @@ export default function Home() {
         <div className="hi">Hi There</div>
       </div>
       <div className="text">
-        Made with <div className="heart"> ❤️ </div> by Ashwin
+        Made with <div className="heart"> ❤️ </div> 
       </div>
     </div>
   );
